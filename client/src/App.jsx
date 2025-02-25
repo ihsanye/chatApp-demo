@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='App'>
       {
-        !chatScreen ? <Room username={username} room={room} setUsername={setUsername} setRoom={setRoom} setChatScreen={setChatScreen} socket={socket} /> : <Chat />
+        !chatScreen ? <Room username={username} room={room} setUsername={setUsername} setRoom={setRoom} setChatScreen={setChatScreen} socket={socket} /> : <Chat socket={socket} username={username} room={room} />
       }
 
     </div>

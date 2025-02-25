@@ -20,6 +20,10 @@ io.on('connection', (socket) => {
     socket.on('room', (data) => {
         socket.join(data)
     })
+
+    socket.on('message', (data) => {
+        socket.to(data.room).emit('messageReturn', data)
+    })
 })
 
 const PORT = 5000
