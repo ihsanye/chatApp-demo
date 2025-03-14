@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: 'http://localhost:5175',
         methods: ['GET', 'POST']
     }
 })
@@ -26,10 +26,8 @@ io.on('connection', (socket) => {
     })
 })
 
-const PORT = 5000
+const PORT = 5005
 
 server.listen(PORT, () => {
     console.log(`server is running on port: ${PORT}`)
 })
-
-//45.45
